@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+   <title>Recon Report — example.com</title>
+<style>
+  :root {
+    --bg: #0f1117; --panel: #161923; --border: #262a38;
+    --text: #e5e7eb; --muted: #9099ab; --accent: #6ee7b7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0; padding: 2.5rem 1.5rem;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; }
+  h1 { font-size: 1.6rem; margin-bottom: 0.2rem; }
+  .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 2rem; }
+  section {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 10px; padding: 1.25rem 1.5rem; margin-bottom: 1.25rem;
+  }
+  h2 {
+    font-size: 1.05rem; margin-top: 0; color: var(--accent);
+    border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  th, td { text-align: left; padding: 0.4rem 0.6rem; vertical-align: top; }
+  th { color: var(--muted); width: 160px; white-space: nowrap; }
+  tr { border-bottom: 1px solid var(--border); }
+  pre { white-space: pre-wrap; word-break: break-word; margin: 0; font-size: 0.8rem; }
+  .warn {
+    background: #2a1f14; border: 1px solid #5c4420; color: #f0c987;
+    padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.85rem; margin-bottom: 1.5rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Reconnaissance Report</h1>
+  <div class="meta">Target: example.com &nbsp;·&nbsp; Generated: 2026-07-10T13:19:13.991110+05:30</div>
+  <div class="warn">For use only on assets you own or are explicitly authorized to test.</div>
+
+  <section><h2>WHOIS</h2><table><tr><th>registrar</th><td><pre>"RESERVED-Internet Assigned Numbers Authority"</pre></td></tr><tr><th>creation_date</th><td><pre>"1995-08-14 04:00:00+00:00"</pre></td></tr><tr><th>expiration_date</th><td><pre>"2026-08-13 04:00:00+00:00"</pre></td></tr><tr><th>name_servers</th><td><pre>[
+  "ELLIOTT.NS.CLOUDFLARE.COM",
+  "HERA.NS.CLOUDFLARE.COM"
+]</pre></td></tr><tr><th>org</th><td><pre>null</pre></td></tr><tr><th>emails</th><td><pre>null</pre></td></tr></table></section>
+  <section><h2>DNS Records</h2><table><tr><th>A</th><td><pre>[
+  "104.20.23.154",
+  "172.66.147.243"
+]</pre></td></tr><tr><th>AAAA</th><td><pre>[
+  "2606:4700:9ae5:72db:f2de:a67:ef6b:ff98"
+]</pre></td></tr><tr><th>MX</th><td><pre>[
+  "0 ."
+]</pre></td></tr><tr><th>NS</th><td><pre>[
+  "elliott.ns.cloudflare.com.",
+  "hera.ns.cloudflare.com."
+]</pre></td></tr><tr><th>TXT</th><td><pre>[
+  "\"_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9\"",
+  "\"v=spf1 -all\""
+]</pre></td></tr><tr><th>SOA</th><td><pre>[
+  "elliott.ns.cloudflare.com. dns.cloudflare.com. 2407636105 10000 2400 604800 1800"
+]</pre></td></tr></table></section>
+
+  <section>
+    <h2>Subdomains (0 found, 0 live)</h2>
+    <table><tr><th>Subdomain</th><th>Resolved IP</th></tr><tr><td colspan=2>None found</td></tr></table>
+  </section>
+
+  <section><h2>HTTP Fingerprint</h2><table><tr><th>https</th><td><pre>{
+  "status_code": 200,
+  "final_url": "https://example.com/",
+  "server": "cloudflare",
+  "powered_by": null,
+  "headers": {
+    "Date": "Fri, 10 Jul 2026 07:49:35 GMT",
+    "Content-Type": "text/html",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Server": "cloudflare",
+    "Last-Modified": "Wed, 01 Jul 2026 17:50:18 GMT",
+    "Allow": "GET, HEAD",
+    "Age": "10",
+    "Cf-Cache-Status": "HIT",
+    "Content-Encoding": "gzip",
+    "CF-RAY": "a18df903bb638c4c-FRA"
+  }
+}</pre></td></tr><tr><th>http</th><td><pre>{
+  "status_code": 200,
+  "final_url": "http://example.com/",
+  "server": "cloudflare",
+  "powered_by": null,
+  "headers": {
+    "Date": "Fri, 10 Jul 2026 07:49:36 GMT",
+    "Content-Type": "text/html",
+    "Transfer-Encoding": "chunked",
+    "Connection": "keep-alive",
+    "Server": "cloudflare",
+    "Last-Modified": "Wed, 01 Jul 2026 17:50:18 GMT",
+    "Allow": "GET, HEAD",
+    "Cf-Cache-Status": "HIT",
+    "Age": "9075",
+    "Content-Encoding": "gzip",
+    "CF-RAY": "a18df908edb64d5a-FRA"
+  }
+}</pre></td></tr></table></section>
+  <section><h2>Well-Known Files</h2><table><tr><th>/robots.txt</th><td><pre>{
+  "status_code": 404,
+  "snippet": null
+}</pre></td></tr><tr><th>/sitemap.xml</th><td><pre>{
+  "status_code": 404,
+  "snippet": null
+}</pre></td></tr><tr><th>/.well-known/security.txt</th><td><pre>{
+  "status_code": 404,
+  "snippet": null
+}</pre></td></tr></table></section>
+</div>
+</body>
+</html>

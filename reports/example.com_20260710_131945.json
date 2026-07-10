@@ -1,0 +1,98 @@
+{
+  "target": "example.com",
+  "host": "example.com",
+  "is_ip": false,
+  "generated_at": "2026-07-10T13:19:13.991110+05:30",
+  "input_type": "domain",
+  "whois": {
+    "registrar": "RESERVED-Internet Assigned Numbers Authority",
+    "creation_date": "1995-08-14 04:00:00+00:00",
+    "expiration_date": "2026-08-13 04:00:00+00:00",
+    "name_servers": [
+      "ELLIOTT.NS.CLOUDFLARE.COM",
+      "HERA.NS.CLOUDFLARE.COM"
+    ],
+    "org": null,
+    "emails": null
+  },
+  "dns": {
+    "A": [
+      "104.20.23.154",
+      "172.66.147.243"
+    ],
+    "AAAA": [
+      "2606:4700:9ae5:72db:f2de:a67:ef6b:ff98"
+    ],
+    "MX": [
+      "0 ."
+    ],
+    "NS": [
+      "elliott.ns.cloudflare.com.",
+      "hera.ns.cloudflare.com."
+    ],
+    "TXT": [
+      "\"_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9\"",
+      "\"v=spf1 -all\""
+    ],
+    "SOA": [
+      "elliott.ns.cloudflare.com. dns.cloudflare.com. 2407636105 10000 2400 604800 1800"
+    ]
+  },
+  "subdomains_found": {
+    "error": "503 Server Error: Service Unavailable for url: https://crt.sh/?q=%25.example.com&output=json"
+  },
+  "http": {
+    "https": {
+      "status_code": 200,
+      "final_url": "https://example.com/",
+      "server": "cloudflare",
+      "powered_by": null,
+      "headers": {
+        "Date": "Fri, 10 Jul 2026 07:49:35 GMT",
+        "Content-Type": "text/html",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Server": "cloudflare",
+        "Last-Modified": "Wed, 01 Jul 2026 17:50:18 GMT",
+        "Allow": "GET, HEAD",
+        "Age": "10",
+        "Cf-Cache-Status": "HIT",
+        "Content-Encoding": "gzip",
+        "CF-RAY": "a18df903bb638c4c-FRA"
+      }
+    },
+    "http": {
+      "status_code": 200,
+      "final_url": "http://example.com/",
+      "server": "cloudflare",
+      "powered_by": null,
+      "headers": {
+        "Date": "Fri, 10 Jul 2026 07:49:36 GMT",
+        "Content-Type": "text/html",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Server": "cloudflare",
+        "Last-Modified": "Wed, 01 Jul 2026 17:50:18 GMT",
+        "Allow": "GET, HEAD",
+        "Cf-Cache-Status": "HIT",
+        "Age": "9075",
+        "Content-Encoding": "gzip",
+        "CF-RAY": "a18df908edb64d5a-FRA"
+      }
+    }
+  },
+  "well_known_files": {
+    "/robots.txt": {
+      "status_code": 404,
+      "snippet": null
+    },
+    "/sitemap.xml": {
+      "status_code": 404,
+      "snippet": null
+    },
+    "/.well-known/security.txt": {
+      "status_code": 404,
+      "snippet": null
+    }
+  }
+}
